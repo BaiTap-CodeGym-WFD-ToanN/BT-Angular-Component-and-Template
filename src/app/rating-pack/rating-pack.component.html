@@ -1,0 +1,35 @@
+<div>
+  <label>
+    show last
+    <input type="checkbox" [(ngModel)]="showLast">
+  </label>
+  <label>
+    show current
+    <input type="checkbox" [(ngModel)]="showCurrent">
+  </label>
+  <label>
+    max:
+    <select [(ngModel)]="max">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+  </label>
+</div>
+<br>
+<div style="display: inline-block">
+  <h5 *ngIf="showLast">last pick: {{last}}</h5>
+  <h5 *ngIf="showCurrent">current pick: {{current}}</h5>
+</div>
+<br>
+<app-true-rating (changed)="currentChanged($event[1]);lastChanged($event[0])"
+                 [size]="max">
+</app-true-rating>
+

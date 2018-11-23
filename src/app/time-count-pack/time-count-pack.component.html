@@ -1,0 +1,11 @@
+<input [(ngModel)]="time">
+<h5 style="color: green">{{message}}</h5>
+<br>
+<app-true-time-count #trueTime
+  [time]="time"
+  (stop)="stopMsg()"
+  (counting)="countingMsg()"
+  (finished)="endMsg()"
+  (start)="startMsg()">
+</app-true-time-count>
+

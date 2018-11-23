@@ -1,0 +1,19 @@
+<label>
+  Name:
+  <input [(ngModel)]="name">
+</label>
+<br>
+<label>
+  Age:
+  <input [(ngModel)]="age">
+</label>
+<br>
+<label>
+  Email:
+  <input [(ngModel)]="email">
+</label>
+
+<app-true-name-card [name]="name"
+                    [age]="age"
+                    [email]="email">
+</app-true-name-card>

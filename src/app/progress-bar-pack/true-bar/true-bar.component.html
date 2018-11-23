@@ -1,0 +1,9 @@
+<div style="height: 200px" [style.background-color]="backgroundColor">
+  <div style="height: 20px" [style.background-color]="barColor">
+    <div [ngStyle]="{
+  backgroundColor: progressColor,
+  width: progress +'%',
+  height: '20px'
+}"></div>
+  </div>
+</div>

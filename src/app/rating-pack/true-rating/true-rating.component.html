@@ -1,0 +1,4 @@
+<div *ngFor="let rate of rateBar; index as i" style="display: inline-block">
+  <i (click)="choose(rate)" style="color: red" *ngIf="rate<=current"> [{{rate}}]&nbsp;&nbsp; &nbsp; </i>
+  <i (click)="choose(rate)" style="color: black" *ngIf="rate>current"> [{{rate}}]&nbsp;&nbsp; &nbsp; </i>
+</div>
