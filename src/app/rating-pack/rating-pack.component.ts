@@ -9,7 +9,7 @@ export class RatingPackComponent implements OnInit {
 
   showCurrent = false;
   showLast = false;
-  max = 20;
+  max = 10;
   current = 0;
   last = 0;
 
